@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right,black,gray,black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    display: none;
+}
+.slider{
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    transition: 1s;
+}
+.slides{
+    width: 400%;
+    height: 500px;
+    display: flex;
+}
+img{
+    width: 800px;
+    height: 500px;
+    box-shadow: 0px 0px 20px #FFF;
+}
+.navigation-manual{
+    width: 800px;
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation-manual .manualBtn{
+    border: 2px solid #01fcfc;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navigation-manual .manualBtn:hover{
+    background-color: #01fcfc;
+}
+.navigation-manual .manualBtn:not(:last-child){
+    transition: 1s;
+    margin-right: 10px;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+    transition: 1s;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+    transition: 1s;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+    transition: 1s;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+    transition: 1s;
+}
+.navigation-auto{
+    width: 800px;
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation-auto div{
+    border: 2px solid #01fcfc;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 10px;
+}
+#radio1:checked ~ .navigation-auto .autoBtn1{
+    background-color: #01fcfc;
+}
+#radio2:checked ~ .navigation-auto .autoBtn2{
+    background-color: #01fcfc;
+}
+#radio3:checked ~ .navigation-auto .autoBtn3{
+    background-color: #01fcfc;
+}
+#radio4:checked ~ .navigation-auto .autoBtn4{
+    background-color: #01fcfc;
+}
